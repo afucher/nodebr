@@ -39,10 +39,9 @@ Tests strict non-equality, as determined by the strict not equal operator ( `!==
 
 ## assert.throws(block[, error][, message])
 
-Expects `block` to throw an error. `error` can be constructor, `RegExp` or
-validation function.
+Espera `block` para lançar um erro. `error` pode ser construtor, `RegExp` ou função de validação.
 
-Validate instanceof using constructor:
+Validar instanceof usando construtor:
 
     assert.throws(
       function() {
@@ -51,7 +50,7 @@ Validate instanceof using constructor:
       Error
     );
 
-Validate error message using RegExp:
+Validar mensagem de erro usando RegExp: 
 
     assert.throws(
       function() {
@@ -60,7 +59,7 @@ Validate error message using RegExp:
       /value/
     );
 
-Validação de erro customizada:
+Validação de erro personalizada:
 
     assert.throws(
       function() {
@@ -76,9 +75,9 @@ Validação de erro customizada:
 
 ## assert.doesNotThrow(block[, message])
 
-Espera `block` para não lançar um erro , veja `assert.throws` para maior detalhes.
+Expects `block` not to throw an error, see `assert.throws` for details.
 
 ## assert.ifError(value)
 
-Testa se um valor não é um valor falso, lança erro se é verdadeiro. Útil quando
-estiver testando o primeiro argumento, `error` em callbacks.
+Tests if value is not a false value, throws if it is a true value. Useful when
+testing the first argument, `error` in callbacks.
